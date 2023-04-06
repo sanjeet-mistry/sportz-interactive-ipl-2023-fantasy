@@ -1,4 +1,4 @@
-$font-primary: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font-primary: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 $color1: rgba(0, 41, 71, 1);
 $color2: #fff;
@@ -13,6 +13,7 @@ $color10: rgba(76, 199, 56, 1);
 $color11: rgba(255, 84, 84, 1);
 $color12: rgba(8, 19, 27, 1);
 
+/* Common Styles Start */
 * { box-sizing: border-box; }
 
 body {
@@ -28,3 +29,74 @@ figure {
     display: block;
   }
 }
+
+.wrapper {
+  max-width: 768px;
+  width: 100%;
+  padding: 25px 1.5%;
+  margin: 0 auto;
+  background-color: $color1;
+}
+/* Common Styles End */
+
+/* Main Title Start */
+.main-title {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div { 
+    width: 50%;
+    display: flex;
+
+    &:last-child { justify-content: end; }
+  }
+
+  .back-button {
+    margin-right: 5%;
+    font-size: 0;
+
+    &:hover { cursor: pointer; }
+    
+    &::before {
+      content: '\f177';
+      color: $color2;
+      font-family: "Font Awesome 6 Free";
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+  }
+
+  h2 {
+    color: $color2;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  .time-left {
+    padding: 4px 5%;
+    border-radius: 4px;
+    margin-right: 7%;
+    display: inline-block;
+    background-color: $color5;
+    color: $color2;
+    font-size: 0.875rem;
+  }
+
+  .help-button {
+    color: $color2;
+    font-size: 0;
+
+    &:hover { cursor: pointer; }
+
+    &::before {
+      content: '\f059';
+      font-family: "Font Awesome 6 Free";
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+}
+/* Main Title End */
