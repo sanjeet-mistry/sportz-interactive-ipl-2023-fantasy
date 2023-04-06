@@ -344,6 +344,7 @@ figure img {
 .players-list .credits-values {
   display: flex;
   flex-basis: 25%;
+  align-items: center;
   justify-content: space-between;
 }
 .players-list .credits-values .credits {
@@ -434,8 +435,11 @@ figure img {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 .control-buttons .continue-button:hover {
+  background-color: #fff;
+  color: rgb(228, 124, 41);
   cursor: pointer;
 }
 
