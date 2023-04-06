@@ -1,4 +1,10 @@
 const body = document.body;
+let widthToHeightMultiplier = 1.2; 
+let bodyWidth = body.clientWidth;
+
+if (bodyWidth < 400) {
+  widthToHeightMultiplier = 1.5;
+}
 
 let uiShown = 1;
 
@@ -8,7 +14,12 @@ const continueButton = listContent.querySelector(".continue-button");
 const playersContent = body.querySelector(".players-content");
 
 const setHeightOfPlayerContent = () => {
-  const height = playersContent.getBoundingClientRect().width * 1.2;
+  const height = playersContent.getBoundingClientRect().width * widthToHeightMultiplier;
+  
+  if (height > 650) {
+    height = 650;
+  }
+
   playersContent.style.height = height + "px";
 }
 
@@ -50,3 +61,22 @@ const hideElement = (element) => {
     element.classList.add("hide");
   }
 }
+
+const onWindowResize = () => {
+  bodyWidth = body.clientWidth;
+
+  if (bodyWidth < 400) {
+    widthToHeightMultiplier = 1.5;
+  } else {
+    widthToHeightMultiplier = 1.2;
+  }
+
+  setHeightOfPlayerContent();
+}
+
+// Add Window resize handler
+let resizeCompleteTimer;
+window.addEventListener("resize", () => {
+	clearTimeout(resizeCompleteTimer);
+	resizeCompleteTimer = setTimeout(onWindowResize, 300);
+});
