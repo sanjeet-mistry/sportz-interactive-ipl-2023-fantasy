@@ -29,6 +29,7 @@ figure img {
   display: inline-block;
   color: #fff;
   font-size: 0.875rem;
+  line-height: 0.875rem;
 }
 
 /* Common Styles End */
@@ -115,8 +116,71 @@ figure img {
   margin-right: 2%;
 }
 .teams .players-selected {
-  padding: 3px 4%;
+  padding: 3px 3%;
   background-color: rgb(76, 105, 126);
 }
 
-/* Team Names Styles End *//*# sourceMappingURL=styles.css.map */
+/* Team Names Styles End */
+/* Some Info Styles Start */
+.some-info {
+  display: flex;
+}
+.some-info > * {
+  width: 50%;
+}
+
+.credits-and-players {
+  display: flex;
+}
+
+.stats {
+  padding: 7px 5px;
+  border-radius: 4px;
+  background-color: rgb(2, 75, 92);
+}
+.stats:first-child {
+  margin-right: 3%;
+}
+.stats > span {
+  display: block;
+}
+.stats .stats-value {
+  margin-right: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.stats .stats-value span {
+  font-size: x-small;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+.stats .full-bar {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  position: relative;
+  background-color: rgb(1, 52, 64);
+}
+.stats .full-bar .inner-bar {
+  height: 100%;
+  border-radius: 4px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 178, 219);
+  font-size: 0;
+}
+
+.credits .full-bar .inner-bar {
+  width: 45%;
+}
+
+.players .full-bar .inner-bar {
+  width: 63%;
+}
+
+/* Some Info Styles End *//*# sourceMappingURL=styles.css.map */
