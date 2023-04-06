@@ -124,6 +124,7 @@ figure img {
 /* Some Info Styles Start */
 .some-info {
   display: flex;
+  justify-content: space-between;
 }
 .some-info > * {
   width: 50%;
@@ -134,7 +135,7 @@ figure img {
 }
 
 .stats {
-  padding: 7px 5px;
+  padding: 8px 5px;
   border-radius: 4px;
   background-color: rgb(2, 75, 92);
 }
@@ -146,7 +147,7 @@ figure img {
 }
 .stats .stats-value {
   margin-right: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: inline-block;
   color: #fff;
   font-size: 1rem;
@@ -181,6 +182,82 @@ figure img {
 
 .players .full-bar .inner-bar {
   width: 63%;
+}
+
+.switch-button {
+  width: 170px;
+  padding-right: 85px;
+  border-radius: 30px;
+  position: relative;
+  background: rgb(0, 29, 50);
+  color: #fff;
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-align: center;
+  text-transform: capitalize;
+}
+.switch-button .switch-button-label-pitch {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+}
+.switch-button .switch-button-label-pitch::before {
+  content: "\f3ce";
+  margin-right: 5px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.switch-button-checkbox {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+.switch-button-checkbox:checked + .switch-button-label:before {
+  transform: translateX(85px);
+  transition: transform 300ms linear;
+}
+.switch-button-checkbox + .switch-button-label {
+  position: relative;
+  padding: 15px 0;
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+.switch-button-checkbox + .switch-button-label:before {
+  content: "";
+  background: rgb(228, 124, 41);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+.switch-button-checkbox + .switch-button-label .switch-button-label-span {
+  position: relative;
+}
+.switch-button-checkbox + .switch-button-label .switch-button-label-span::before {
+  content: "\f15c";
+  margin-right: 5px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
 }
 
 /* Some Info Styles End *//*# sourceMappingURL=styles.css.map */
