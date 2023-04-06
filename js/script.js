@@ -14,7 +14,7 @@ const continueButton = listContent.querySelector(".continue-button");
 const playersContent = body.querySelector(".players-content");
 
 const setHeightOfPlayerContent = () => {
-  const height = playersContent.getBoundingClientRect().width * widthToHeightMultiplier;
+  let height = playersContent.getBoundingClientRect().width * widthToHeightMultiplier;
   
   if (height > 650) {
     height = 650;
