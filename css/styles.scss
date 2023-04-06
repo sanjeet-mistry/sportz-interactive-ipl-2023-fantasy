@@ -1,0 +1,30 @@
+$font-primary: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+$color1: rgba(0, 41, 71, 1);
+$color2: #fff;
+$color3: rgba(76, 105, 126, 1);
+$color4: rgba(0, 29, 50, 1);
+$color5: rgba(2, 75, 92, 1);
+$color6: rgba(0, 178, 219, 1);
+$color7: rgba(1, 52, 64, 1);
+$color8: rgba(8, 52, 64, 1);
+$color9: rgba(228, 124, 41, 1);
+$color10: rgba(76, 199, 56, 1);
+$color11: rgba(255, 84, 84, 1);
+$color12: rgba(8, 19, 27, 1);
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: $font-primary;
+}
+
+figure {
+  img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+}
