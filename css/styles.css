@@ -128,12 +128,24 @@ figure img {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 400px) {
+  .some-info {
+    display: block;
+  }
+}
 .some-info > * {
   width: 50%;
 }
 
 .credits-and-players {
   display: flex;
+}
+@media screen and (max-width: 400px) {
+  .credits-and-players {
+    width: 100%;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
 }
 
 .stats {
@@ -197,6 +209,11 @@ figure img {
   overflow: hidden;
   text-align: center;
   text-transform: capitalize;
+}
+@media screen and (max-width: 400px) {
+  .switch-button {
+    margin: 0 auto;
+  }
 }
 .switch-button .switch-button-label-pitch {
   width: 85px;

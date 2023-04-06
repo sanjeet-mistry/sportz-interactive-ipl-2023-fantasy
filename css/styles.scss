@@ -15,6 +15,14 @@ $color12: rgba(8, 19, 27, 1);
 $color13: rgba(228, 228, 228, 1);
 $color14: rgba(230, 237, 239, 1);
 
+@mixin breakpoint($device) {
+	@if ($device == 'small-mobile') {
+		@media screen and (max-width: 400px) {
+      @content;
+    }
+	}
+}
+
 /* Common Styles Start */
 * { box-sizing: border-box; }
 
@@ -171,10 +179,22 @@ figure {
   display: flex;
   justify-content: space-between;
 
+  @include breakpoint(small-mobile) {
+    display: block;
+  }
+
   > * { width: 50%; }
 }
 
-.credits-and-players { display: flex; }
+.credits-and-players { 
+  display: flex; 
+
+  @include breakpoint(small-mobile) {
+    width: 100%;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+}
 
 .stats {
   padding: 8px 2%;
@@ -246,6 +266,10 @@ figure {
   overflow: hidden;
   text-align: center;
   text-transform: capitalize;
+
+  @include breakpoint(small-mobile) {
+    margin: 0 auto;
+  }
 
   .switch-button-label-pitch {
     width: 85px;
