@@ -149,6 +149,7 @@ figure {
 
   img { 
     width: 5%;
+    min-width: 30px;
     height: auto;
     border: 1px solid $color2;
     border-radius: 2px;
@@ -485,7 +486,77 @@ figure {
 }
 /* List Content Styles End */
 
+/* Players Content Styles Start */
+.players-content {
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  background-color: green;
+}
+
+.player-row {
+  width: 100%;
+  position: absolute;
+  left: 0;
+
+  img { 
+    width: 50px; 
+    height: 56px;
+  }
+
+  h3 {
+    margin-bottom: 7px;
+    color: $color2;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  ul { 
+    display: flex; 
+    justify-content: space-evenly;
+  }
+
+  li {
+    h4 {
+      padding: 3px 10px;
+      border-radius: 3px;
+      margin-bottom: 2px;
+      font-size: 0.625rem;
+    }
+
+    .price {
+      width: 100%;
+      display: inline-block;
+      color: $color2;
+      font-size: 0.625rem;
+      text-align: center;
+    }
+
+    &.team-1 {
+      h4 {
+        background-color: $color2;
+        color: $color1;
+      }
+    }
+
+    &.team-2 {
+      h4 {
+        background-color: $color12;
+        color: $color2;
+      }
+    }
+  }
+
+  &.wicket-keepers { top: 1%; }
+  &.batsmen { top: 26%; }
+  &.all-rounders { top: 51%; }
+  &.bowlers { top: 76%; } 
+  
+}
+/* Players Content Styles End */
+
 /* Common Override Styles Start */
-.show { display: initial; }
+.show { display: inherit; }
 .hide { display: none; }
 /* Common Override Styles End */
