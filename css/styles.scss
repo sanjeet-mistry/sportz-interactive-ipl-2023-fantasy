@@ -162,7 +162,6 @@ figure {
   background-color: $color5;
 
   &:first-child { margin-right: 3%; }
-
   > span { display: block; }
 
   .stats-value {
@@ -229,15 +228,15 @@ figure {
   text-transform: capitalize;
 
   .switch-button-label-pitch {
+    width: 85px;
+    display: flex;
     position: absolute;
+    z-index: 3;
     top: 0;
     bottom: 0;
     right: 0;
-    width: 85px;
-    display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 3;
     pointer-events: none;
 
     &::before {
@@ -249,15 +248,15 @@ figure {
   }
 
   &-checkbox {
-    cursor: pointer;
+    width: 100%;
+    height: 100%;
     position: absolute;
+    z-index: 2;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
     opacity: 0;
-    z-index: 2;
+    cursor: pointer;
 
     &:checked + .switch-button-label:before {
       transform: translateX(85px);
@@ -265,21 +264,21 @@ figure {
     }
 
     & + .switch-button-label {
-      position: relative;
       padding: 15px 0;
       display: block;
-      user-select: none;
+      position: relative;
       pointer-events: none;
+      user-select: none;
 
       &:before {
         content: "";
-        background: $color9;
-        height: 100%;
         width: 100%;
+        height: 100%;
+        border-radius: 30px;
         position: absolute;
         left: 0;
         top: 0;
-        border-radius: 30px;
+        background: $color9;
         transform: translateX(0);
         transition: transform 300ms;
       }
