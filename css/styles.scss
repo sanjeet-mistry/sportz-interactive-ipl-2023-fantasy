@@ -37,6 +37,14 @@ figure {
   margin: 0 auto;
   background-color: $color1;
 }
+
+%round-box {
+  padding: 4px 5%;
+  border-radius: 4px;
+  display: inline-block;
+  color: $color2;
+  font-size: 0.875rem;
+}
 /* Common Styles End */
 
 /* Main Title Start */
@@ -76,13 +84,9 @@ figure {
   }
 
   .time-left {
-    padding: 4px 5%;
-    border-radius: 4px;
+    @extend %round-box;
     margin-right: 7%;
-    display: inline-block;
     background-color: $color5;
-    color: $color2;
-    font-size: 0.875rem;
   }
 
   .help-button {
@@ -100,3 +104,43 @@ figure {
   }
 }
 /* Main Title End */
+
+/* Team Names SCSS Start */
+.teams {
+  margin-bottom: 20px;
+  
+  li {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  figure {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: $color2;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+  }
+
+  img { 
+    width: 5%;
+    height: auto;
+    border: 1px solid $color2;
+    border-radius: 2px;
+    margin: unset;
+    margin-right: 2%;
+  }
+
+  .players-selected {
+    @extend %round-box;
+    padding: 3px 4%;
+    background-color: $color3;
+  }
+}
+/* Team Names SCSS End */

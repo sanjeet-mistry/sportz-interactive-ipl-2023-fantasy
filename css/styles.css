@@ -23,6 +23,14 @@ figure img {
   background-color: rgb(0, 41, 71);
 }
 
+.teams .players-selected, .main-title .time-left {
+  padding: 4px 5%;
+  border-radius: 4px;
+  display: inline-block;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
 /* Common Styles End */
 /* Main Title Start */
 .main-title {
@@ -59,13 +67,8 @@ figure img {
   text-transform: capitalize;
 }
 .main-title .time-left {
-  padding: 4px 5%;
-  border-radius: 4px;
   margin-right: 7%;
-  display: inline-block;
   background-color: rgb(2, 75, 92);
-  color: #fff;
-  font-size: 0.875rem;
 }
 .main-title .help-button {
   color: #fff;
@@ -81,4 +84,39 @@ figure img {
   font-weight: 500;
 }
 
-/* Main Title End *//*# sourceMappingURL=styles.css.map */
+/* Main Title End */
+/* Team Names SCSS Start */
+.teams {
+  margin-bottom: 20px;
+}
+.teams li {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.teams li:last-child {
+  margin-bottom: 0;
+}
+.teams figure {
+  display: flex;
+  align-items: center;
+}
+.teams figure span {
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.teams img {
+  width: 5%;
+  height: auto;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  margin: unset;
+  margin-right: 2%;
+}
+.teams .players-selected {
+  padding: 3px 4%;
+  background-color: rgb(76, 105, 126);
+}
+
+/* Team Names SCSS End *//*# sourceMappingURL=styles.css.map */
