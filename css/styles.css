@@ -123,6 +123,7 @@ figure img {
 /* Team Names Styles End */
 /* Some Info Styles Start */
 .some-info {
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -135,7 +136,7 @@ figure img {
 }
 
 .stats {
-  padding: 8px 5px;
+  padding: 8px 2%;
   border-radius: 4px;
   background-color: rgb(2, 75, 92);
 }
@@ -260,4 +261,140 @@ figure img {
   font-weight: 900;
 }
 
-/* Some Info Styles End *//*# sourceMappingURL=styles.css.map */
+/* Some Info Styles End */
+/* List Content Styles Start */
+.list-items {
+  padding: 5px 7px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.content-title {
+  padding: 5px 2%;
+  border-radius: 10px;
+  display: flex;
+  background-color: rgb(228, 228, 228);
+  align-items: center;
+}
+.content-title span {
+  color: rgb(0, 41, 71);
+  font-size: 0.625rem;
+  text-transform: capitalize;
+}
+.content-title .players {
+  flex-basis: 60%;
+}
+.content-title .points {
+  flex-basis: 15%;
+}
+.content-title .credits {
+  flex-basis: 25%;
+}
+
+.players-list {
+  padding: 5px 0 0;
+}
+.players-list li {
+  width: 100%;
+  padding: 5px 2%;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+.players-list li.selected {
+  border-radius: 4px;
+  background-color: rgb(230, 237, 239);
+}
+.players-list li:last-child {
+  margin-bottom: 0;
+}
+.players-list .players-values {
+  display: flex;
+  flex-basis: 60%;
+}
+.players-list figure {
+  margin-right: 3%;
+}
+.players-list img {
+  width: 50px;
+}
+.players-list .player-name-and-team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.players-list .player-name-and-team h3 {
+  margin-bottom: 3px;
+  color: rgb(0, 41, 71);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.players-list .player-name-and-team span {
+  color: rgb(76, 105, 126);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.players-list .points {
+  color: rgb(76, 105, 126);
+  font-size: 0.875rem;
+  flex-basis: 15%;
+}
+.players-list .credits-values {
+  display: flex;
+  flex-basis: 25%;
+  justify-content: space-between;
+}
+.players-list .credits-values .credits {
+  color: rgb(0, 41, 71);
+  font-size: 0.875rem;
+}
+.players-list .credits-values .add {
+  font-size: 0;
+}
+.players-list .credits-values .add::before {
+  content: "+";
+  width: 20px;
+  height: 20px;
+  display: flex;
+  border: 2px solid rgb(76, 199, 56);
+  border-radius: 50%;
+  color: rgb(76, 199, 56);
+  font-family: "Font Awesome 6 Free";
+  font-size: 0.875rem;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.players-list .credits-values .remove {
+  font-size: 0;
+}
+.players-list .credits-values .remove::before {
+  content: "\f068";
+  width: 20px;
+  height: 20px;
+  display: flex;
+  border: 2px solid rgb(255, 84, 84);
+  border-radius: 50%;
+  color: rgb(255, 84, 84);
+  font-family: "Font Awesome 6 Free";
+  font-size: 0.875rem;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* List Content Styles End */
+/* Common Override Styles Start */
+.show {
+  display: initial;
+}
+
+.hide {
+  display: none;
+}
+
+/* Common Override Styles End *//*# sourceMappingURL=styles.css.map */
