@@ -47,7 +47,7 @@ figure {
 }
 /* Common Styles End */
 
-/* Main Title Start */
+/* Main Title Styles Start */
 .main-title {
   margin-bottom: 40px;
   display: flex;
@@ -103,12 +103,12 @@ figure {
     }
   }
 }
-/* Main Title End */
+/* Main Title Styles End */
 
-/* Team Names SCSS Start */
+/* Team Names Styles Start */
 .teams {
   margin-bottom: 20px;
-  
+
   li {
     margin-bottom: 15px;
     display: flex;
@@ -143,4 +143,4 @@ figure {
     background-color: $color3;
   }
 }
-/* Team Names SCSS End */
+/* Team Names Styles End */

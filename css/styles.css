@@ -32,7 +32,7 @@ figure img {
 }
 
 /* Common Styles End */
-/* Main Title Start */
+/* Main Title Styles Start */
 .main-title {
   margin-bottom: 40px;
   display: flex;
@@ -84,8 +84,8 @@ figure img {
   font-weight: 500;
 }
 
-/* Main Title End */
-/* Team Names SCSS Start */
+/* Main Title Styles End */
+/* Team Names Styles Start */
 .teams {
   margin-bottom: 20px;
 }
@@ -119,4 +119,4 @@ figure img {
   background-color: rgb(76, 105, 126);
 }
 
-/* Team Names SCSS End *//*# sourceMappingURL=styles.css.map */
+/* Team Names Styles End *//*# sourceMappingURL=styles.css.map */
